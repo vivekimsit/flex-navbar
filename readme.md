@@ -2,4 +2,4 @@
 
 > Flexbox based navigation demo
 
-[Demo](https://vivekimsit.github.io/flex-navigation/)
+[Demo](https://vivekimsit.github.io/flex-navbar/)
