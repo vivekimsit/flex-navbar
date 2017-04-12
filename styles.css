@@ -52,6 +52,19 @@ a:hover {
   flex: 1;
 }
 
+img {
+  width: 100%;
+}
+
+section, footer {
+  text-align: center;
+  background:rgba(0,0,0,0.2);
+  padding:20px;
+  margin:20px 0;
+  color:white;
+  font-weight: 100;
+}
+
 @media all and (max-width:1000px) {
   .flex-nav ul {
     flex-wrap: wrap; // needs flex-basis to be applied on items
@@ -69,5 +82,36 @@ a:hover {
 @media all and (max-width:500px) {
   .flex-nav li {
     flex: 100%;
+  }
+
+  /* Flex container */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Flex items */
+  .wrapper > * {
+    order: 9999;
+  }
+
+  .flex-nav {
+    order: 1; /* By default order is 0 and that's why we need below styles. */
+  }
+
+  .toggleNav {
+    display: block;
+  }
+
+  .flex-nav > ul {
+    display: none;
+  }
+
+  .flex-nav > ul.open {
+    display: flex;
+   }
+
+  .top {
+    order: 2;
   }
 }

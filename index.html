@@ -8,7 +8,11 @@
   </head>
   <body>
     <div class="wrapper">
+      <header class="top">
+        <h1><a href="#">What the flexbox?</a></h1>
+      </header>
       <nav class="flex-nav">
+        <a href="#" class="toggleNav">☰ Menu</a>
         <ul>
           <li><a href="#">Item 01</a></li>
           <li><a href="#">Item 02</a></li>
@@ -28,6 +32,23 @@
           </li>
         </ul>
       </nav>
+      <section class="hero">
+        <img src="http://lorempixel.com/1000/600/abstract">
+      </section>
+      <section class="details">
+        <p>Hello World</p>
+      </section>
+      <footer>
+        <p>&copy; Vivek Poddar</p>
+      </footer>
     </div>
+    <script>
+      function handleToggleNavClick(e) {
+        const menu = document.querySelector('nav > ul');
+        menu.classList.toggle('open');
+      }
+      const toggleNav = document.querySelector('.toggleNav');
+      toggleNav.addEventListener('click', handleToggleNavClick);
+    </script>
   </body>
 </html>
